@@ -1,0 +1,493 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./t1.jpg);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.header1 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./t2.jpg);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.header2 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./t3.jpg);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* --- Nagłówek wideo (Podstrona 3) --- */
+.header-video {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.header-bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+.header-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+.header-content {
+  position: relative;
+  z-index: 3;
+  height: 100%;
+}
+
+/* --- Poprawiona Sekcja Nawigacji --- */
+.main {
+  max-width: 1200px;
+  margin: auto;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo img {
+  margin-top: 10px;
+  width: 120px;
+  height: auto;
+  display: block;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+  padding: 0;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  transition: 0.2s ease;
+  white-space: nowrap;
+  display: block;
+}
+
+ul li a:hover, 
+ul li.active a {
+  background-color: #afa07f;
+  color: #000;
+}
+
+.title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Brush Script MT', cursive;
+  text-align: center;
+  width: 100%;
+}
+
+.title h1 {
+  color: #f0e7d3;
+  font-size: 90px;
+  font-family: 'Brush Script MT', cursive;
+}
+
+/* --- Sekcja Główna --- */
+.section-dark {
+  background-color: #afa07f;
+  color: #fff;
+  padding: 80px 40px;
+}
+
+/* Układ dla Strony Głównej i Podstrony 3 */
+.section-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.text-container {
+  flex: 1.2;
+  text-align: left;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.text-container h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.text-container p {
+  margin-bottom: 15px;
+}
+
+.image-container {
+  flex: 0.8;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Wideo (Podstrona 3) --- */
+.video-section {
+  max-width: 1200px;
+  margin: 50px auto 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.video-wrapper {
+  width: 100%;
+  max-width: 650px;
+}
+
+.video-wrapper video {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* --- Sekcja Galerii i Sklepu --- */
+.gallery-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.category-title {
+  font-size: 32px;
+  color: #fff;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Kafelki z opisami (Galeria i Sklep) */
+.gallery-item {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-image {
+  flex: 0 0 280px;
+  display: flex;
+  justify-content: center;
+}
+
+.gallery-image img {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.gallery-image img:hover {
+  transform: scale(1.03);
+}
+
+.gallery-desc {
+  flex: 1;
+  text-align: left;
+}
+
+.gallery-desc h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.gallery-desc p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #f1f1f1;
+  margin-bottom: 10px;
+}
+
+/* --- Minikaruzela w kafelku galerii --- */
+.mini-carousel-container {
+  position: relative;
+  flex: 0 0 280px;
+  width: 280px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.mini-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.mini-track::-webkit-scrollbar {
+  display: none;
+}
+
+.mini-item {
+  flex: 0 0 100%;
+  width: 100%;
+}
+
+.mini-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Stylizacja przycisków w minikaruzeli galerii */
+.mini-carousel-container .tiles-btn {
+  width: 32px;
+  height: 32px;
+  font-size: 18px;
+  border-width: 1px;
+}
+
+.mini-carousel-container .prev-btn {
+  left: 6px;
+}
+
+.mini-carousel-container .next-btn {
+  right: 6px;
+}
+
+/* --- Karuzela Miniatur w kafelku (Podstrona 4) --- */
+.carousel-card-container {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+
+.carousel-wrapper {
+  position: relative;
+  margin-top: 25px;
+}
+
+.tiles-track {
+  display: flex;
+  gap: 25px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px 0;
+  scrollbar-width: none;
+}
+
+.tiles-track::-webkit-scrollbar {
+  display: none;
+}
+
+.tile-item {
+  flex: 0 0 280px;
+  aspect-ratio: 1.1 / 1;
+  border: 4px solid #000;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.tile-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.tile-item img:hover {
+  transform: scale(1.04);
+}
+
+/* Dedykowana stylizacja dla pionowych filmów (9:16) w karuzeli */
+.video-carousel .tile-item {
+  flex: 0 0 200px;
+  aspect-ratio: 9 / 16;
+  background-color: #000;
+}
+
+.video-carousel .tile-item video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+/* Przyciski w karuzelach */
+.tiles-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  border: 2px solid #fff;
+  font-size: 24px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.tiles-btn:hover {
+  background: #000;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-wrapper .prev-btn {
+  left: -20px;
+}
+
+.carousel-wrapper .next-btn {
+  right: -20px;
+}
+
+/* --- Modal --- */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 85%;
+  max-height: 80vh;
+  object-fit: contain;
+}
+
+.close-modal {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 60px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* --- RESPONSYWNOŚĆ --- */
+@media (max-width: 768px) {
+  .section-dark {
+    padding: 40px 20px;
+  }
+
+  .section-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .carousel-card-container {
+    padding: 20px;
+  }
+
+  .tile-item {
+    flex: 0 0 180px;
+  }
+
+  .video-carousel .tile-item {
+    flex: 0 0 180px;
+  }
+
+  .gallery-item {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .mini-carousel-container {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  ul {
+    margin-top: 15px;
+  }
+  
+  .title h1 {
+    font-size: 50px;
+  }
+
+  .carousel-wrapper .prev-btn {
+    left: 5px;
+  }
+
+  .carousel-wrapper .next-btn {
+    right: 5px;
+  }
+}
+
+.stopka {
+  background-color: #000;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
