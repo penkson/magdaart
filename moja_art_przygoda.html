@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Moja art przygoda</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+  </head>
+  <body>
+    <header class="header-video">
+      <!-- Wideo tła -->
+      <video autoplay loop muted playsinline class="header-bg-video">
+        <source src="./background.mp4" type="video/mp4" />
+      </video>
+      
+      <!-- Ciemna nakładka dla lepszej czytelności tekstu -->
+      <div class="header-overlay"></div>
+
+      <div class="header-content">
+        <div class="main">
+          <div class="logo"><img src="logo1.png" alt="Logo" /></div>
+          <ul>
+            <li><a href="./index.html">Strona główna</a></li>
+            <li><a href="./galeria.html">Galeria</a></li>
+            <li class="active"><a href="#">Moja art przygoda</a></li>
+            <li><a href="./inne_art_rzeczy.html">Inne art rzeczy</a></li>
+          </ul>
+        </div>
+        <div class="title"><h1>Moja art przygoda</h1></div>
+      </div>
+    </header>
+
+    <section class="section-dark">
+      <!-- Górny blok: Zdjęcie i Tekst obok siebie -->
+      <div class="section-content">
+        <div class="image-container">
+          <img src="./art_przygoda.jpg" alt="Magdalena Cyman - O mnie" />
+        </div>
+        <div class="text-container">
+          <h1>Jak to się zaczęło?</h1>
+          <p>​Moja artystyczna podróż zaczęła się w cichym, ciepłym domu babci. Jako mała dziewczynka, zafascynowana obrazkami leżącymi na stoliku, sięgnęłam po kartkę i spróbowałam przelać ten zachwyt na papier. Gdy babcia zobaczyła mój rysunek, w jej oczach pojawił się błysk. To była ta jedna, wyjątkowa chwila – spojrzała na mnie i z pełną przekonania czułością przepowiedziała, że zostanę malarką.</p>
+          <p>​I miała rację. Głód tworzenia, pasję i żyłkę do eksperymentowania w najróżniejszych dziedzinach sztuki odziedziczyłam po wujku. To dzięki temu połączeniu dziś z taką samą radością sięgam po pędzel, igłę czy stare drewno, ciągle odkrywając coś nowego.</p>
+          <p>​Zapraszam Cię do obejrzenia filmiku. Usiądź z nami i posłuchaj, jak razem z babcią wracamy do momentu, w którym to wszystko się narodziło.</p>
+        </div>
+      </div>
+
+      <!-- Dolny blok: Pobrany film wideo MP4 pod spodem -->
+      <div class="video-section">
+        <div class="video-wrapper">
+          <video controls>
+            <source src="./moja_przygoda.mp4" type="video/mp4" />
+            Twoja przeglądarka nie obsługuje odtwarzacza wideo.
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <div class="stopka">
+      <p>Wszelkie materiały, dzieła, zdjęcia, grafiki, teksty oraz inne treści prezentowane w niniejszym serwisie stanowią wyłączną własność Magdaleny Cyman i są chronione prawem autorskim oraz przepisami o ochronie własności intelektualnej.</p>
+      <p>Kopiowanie, zwielokrotnianie, rozpowszechnianie, modyfikowanie lub jakiekolwiek inne wykorzystywanie prezentowanych materiałów w całości lub w części, bez uprzedniej pisemnej zgody Magdaleny Cyman, jest surowo zabronione.</p>
+    </div>
+  </body>
+</html>
