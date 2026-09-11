@@ -52,16 +52,17 @@
           </div>
         </div>
 
-                <!-- Element galerii 3 (Eteryczny Szept Czułej Nocy) -->
+        <!-- Element galerii 3 (Eteryczny Szept Czułej Nocy) -->
         <div class="gallery-item">
           <div class="mini-carousel-container">
-            <button class="tiles-btn prev-btn" aria-label="Poprzednie zdjęcie">&lt;</button>
+            <button class="mini-btn mini-prev" aria-label="Poprzednie zdjęcie">&lt;</button>
             <div class="mini-track">
+              <div class="mini-item"><img src="./eteryczny_szept_czulej_nocy_calosc.jpg" alt="Eteryczny Szept Czułej Nocy" class="zoomable-img" /></div>
               <div class="mini-item"><img src="./eteryczny_szept_czulej_nocy1.jpg" alt="Eteryczny Szept Czułej Nocy - część 1" class="zoomable-img" /></div>
               <div class="mini-item"><img src="./eteryczny_szept_czulej_nocy2.jpg" alt="Eteryczny Szept Czułej Nocy - część 2" class="zoomable-img" /></div>
               <div class="mini-item"><img src="./eteryczny_szept_czulej_nocy3.jpg" alt="Eteryczny Szept Czułej Nocy - część 3" class="zoomable-img" /></div>
-            </div> <!-- Poprawnie domknięty mini-track -->
-            <button class="tiles-btn next-btn" aria-label="Następne zdjęcie">&gt;</button>
+            </div>
+            <button class="mini-btn mini-next" aria-label="Następne zdjęcie">&gt;</button>
           </div>
           <div class="gallery-desc">
             <h2>Eteryczny Szept Czułej Nocy</h2>
@@ -72,7 +73,7 @@
           </div>
         </div>
 
-                <!-- Element galerii 4 -->
+        <!-- Element galerii 4 -->
         <div class="gallery-item">
           <div class="gallery-image">
             <img src="./pastelove_love.jpg" alt="Pastelove Love" class="zoomable-img" />
@@ -86,7 +87,7 @@
           </div>
         </div>
 
-                <!-- Element galerii 5 -->
+        <!-- Element galerii 5 -->
         <div class="gallery-item">
           <div class="gallery-image">
             <img src="./taniec_makowego_szeptu.jpg" alt="Taniec Makowego Szeptu" class="zoomable-img" />
@@ -99,15 +100,16 @@
           </div>
         </div>
 
-                <!-- Element galerii 6 (Autentyczność) -->
+        <!-- Element galerii 6 (Autentyczność) -->
         <div class="gallery-item">
           <div class="mini-carousel-container">
-            <button class="tiles-btn prev-btn" aria-label="Poprzednie zdjęcie">&lt;</button>
+            <button class="mini-btn mini-prev" aria-label="Poprzednie zdjęcie">&lt;</button>
             <div class="mini-track">
+              <div class="mini-item"><img src="./autentycznosc_calosc.jpg" alt="Autentyczność" class="zoomable-img" /></div>
               <div class="mini-item"><img src="./Autentycznosc1.jpg" alt="Autentyczność - część 1" class="zoomable-img" /></div>
               <div class="mini-item"><img src="./Autentycznosc2.jpg" alt="Autentyczność - część 2" class="zoomable-img" /></div>
             </div>
-            <button class="tiles-btn next-btn" aria-label="Następne zdjęcie">&gt;</button>
+            <button class="mini-btn mini-next" aria-label="Następne zdjęcie">&gt;</button>
           </div>
           <div class="gallery-desc">
             <h2>Autentyczność</h2>
@@ -164,18 +166,22 @@
         }
       });
 
-      // 2. Uniwersalna obsługa WSZYSTKICH minikaruzel na stronie
+      // 2. Obsługa minikaruzeli na dedykowanych klasach
       document.querySelectorAll('.mini-carousel-container').forEach(container => {
         const miniTrack = container.querySelector('.mini-track');
-        const prevBtn = container.querySelector('.prev-btn');
-        const nextBtn = container.querySelector('.next-btn');
+        const prevBtn = container.querySelector('.mini-prev');
+        const nextBtn = container.querySelector('.mini-next');
 
         if (miniTrack && prevBtn && nextBtn) {
-          nextBtn.addEventListener('click', () => {
+          nextBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
             miniTrack.scrollBy({ left: miniTrack.clientWidth, behavior: 'smooth' });
           });
 
-          prevBtn.addEventListener('click', () => {
+          prevBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
             miniTrack.scrollBy({ left: -miniTrack.clientWidth, behavior: 'smooth' });
           });
         }
